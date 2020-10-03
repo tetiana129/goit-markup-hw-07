@@ -12,7 +12,7 @@
         
         /*Основные настройки для все страниц*/
         
-        body {
+        .page {
             color: var(--primary-text-color);
             background-color: var(--withe-color);
             
@@ -29,20 +29,29 @@
             width: 1200px;
             padding-left: 15px;
             padding-right: 15px;
-            /*outline: 2px solid tomato;*/
-            
+                        
+        }
+
+        .item__marg:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        .list__flex {
+            display: flex;                 
         }
         
                
         /*Свойства header,  footer */
 
         
-        .logo, .logo-footer, .link {
+        .link {
             text-decoration: none;
         }
 
-        .site-nav, .auth-nav {
+        .list {
             list-style: none;
+            padding: 0;
+            margin: 0;
         }
                     
        .logo-web {
@@ -64,16 +73,13 @@
             line-height: 1.2;
         }
 
-        .main-nav {
+        .navigation {
             display: flex;
             align-items: center;
         }
                 
         .site-nav, .auth-nav {
-            display: flex;
-
-            padding: 0;
-            margin: 0;
+            /*display: flex;*/
            
             font-weight: 500;
             line-height: 1.14;
@@ -88,11 +94,11 @@
             margin-left: auto;
         }
 
-        .site-nav .item + .item {
+        .site-nav__item + .site-nav__item {
             margin-left: 50px;
         }
         
-        .site-nav .link {
+        .site-nav__link {
             display: block;
             padding-top: 21px;
             padding-bottom: 21px;
@@ -111,11 +117,11 @@
             color: var(--accent-color);
         }
 
-        .logo-link {
+        .site-nav__link {
             position: relative;
         }
 
-        .logo-link.current::after {
+        .site-nav__link.current::after {
             content: "";
             position: absolute;
             width: 100%;
@@ -125,12 +131,8 @@
             bottom: 0;
             left: 0;
         }
-        
-
-        .auth-nav .item {
-            display: flex;                      
-        }
-        .auth-link {
+     
+        .auth-nav__link {
             display: flex;
             flex-direction: row-reverse;
             padding-top: 21px;
@@ -141,16 +143,16 @@
             transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .auth-nav .item + .item {
+        .auth-nav__item + .auth-nav__item {
             margin-left: 30px;
         }        
         
-        .auth-link:hover .auth-icon,
-        .auth-link:focus .auth-icon {
+        .auth-nav__link:hover .auth-icon,
+        .auth-nav__link:focus .auth-icon {
             fill: var(--accent-color);
         }
-        .auth-link:hover,
-        .auth-link:focus {
+        .auth-nav__link:hover,
+        .auth-nav__link:focus {
             color: var(--accent-color);
         }
          
@@ -169,28 +171,17 @@
 
         /*Футер*/
 
-        footer {
+        .footer {
             background-color: var(--bgc-dark-grey);
 
             padding-top: 60px;
             padding-bottom: 60px;
         }
 
-        footer .container {
+        .container__flex {
             display: flex;
         }
-
-        footer ul {
-            padding: 0;
-            margin: 0;
-        }
-
-        footer li {
-            list-style: none;
-            text-decoration: none;
-           
-        }
-        
+                
         .address {
             color: var(--withe-color);
             font-style: normal;
@@ -199,36 +190,36 @@
 
         .logo-footer {
             display: inline-block;
-            margin-bottom: 20px;
-
             
-            list-style: none;
+           
         }
         
         /*Свойства address*/
-        .address p {
-            padding: 0;
-            margin: 0px 0px 9px 0px;
+        .address-logo__item {
+            margin-bottom: 20px;
+        }
+
+        .address__item:not(:last-child) {
+            /*padding: 0;*/
+            margin-bottom: 9px;
         }
                       
         .address .mail {
             color: var(--second-text-color);
-            margin: 0px 0px 9px 0px;
-            text-decoration: none;
+            
         }
         
         .address .tel {
-            display: inline-block;
+            /*display: inline-block;*/
             color: var(--second-text-color);
-            text-decoration: none;
+           
         }
 
-        .container-social {
-            padding: 0;
+        .container-social {            
             margin: 15px 0px 0px 70px;
         }    
         
-        .container-social p {
+        .container-social__label {
             font-weight: 700;
             line-height: 1.14;
             text-transform: uppercase;
@@ -236,7 +227,7 @@
             margin: 0px 0px 20px 0px;
         }
 
-        .social-icon-item .blue-circle-link {
+        .social-icons__item .blue-circle-link {
             background-color: rgba(255, 255, 255, 0.1);
         }
 
@@ -244,8 +235,7 @@
             fill: var(--withe-color);
         }
 
-        .container-email {
-            /*display: flex;*/
+        .container-email {            
             padding: 0;
             margin-top: 12px;
             margin-left: auto;
@@ -255,12 +245,12 @@
             display: flex;
         }
           
-        .form-field-email {
+        .form-field__email {
             display: flex;
             flex-direction: column;
         }
               
-        .form-field-email label {
+        .email__label {
             font-weight: 700;
             line-height: 1.14;
             text-transform: uppercase;
@@ -268,7 +258,7 @@
             margin: 0px 0px 20px 0px;
         }
           
-        .form-field-email input {
+        .email__input {
             width: 358px;
             margin: 0;
             padding: 16px 0px 16px 16px;
@@ -276,6 +266,7 @@
             box-sizing: border-box;
             background-color: var(--bgc-dark-grey);
             border-radius: 4px;
+            color: rgba(255, 255, 255, 0.6);
           
         }
           
@@ -286,29 +277,19 @@
             color: rgba(255, 255, 255, 0.6);
         }
 
-        .form-field button {
+        .btn__subscription {
             position: relative;
             width: 200px;
             height: 50px;
             padding-left: 29px;
             margin-top: 36px;
-            border-width: 0;
-            background-color: var(--accent-color);        
+                   
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-            border-radius: 4px;
+            
             margin-left: 12px;
             
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 1.875;
-            letter-spacing: 0.06em;
-
-            color: var(--withe-color);
-
             display: flex;
-            align-items: center;
-            
-           
+                       
         }
         
         .icon-send {
@@ -337,7 +318,7 @@
             background-image: url(../images/Img-hero-opim.jpg);*/
         }
 
-        .overlay {
+        .hero__container {
             height: 600px;
             margin-left: auto;
             margin-right: auto;
@@ -350,25 +331,25 @@
             
         }
         
-        .hero .hero-title,
-        .hero .hero-button {
+        .hero__title {
             color: var(--withe-color);
         }
         
-        .hero .hero-button {
+        .btn {
             background-color: var(--accent-color);
+            color: var(--withe-color);
             font-weight: 700;
             font-size: 16px;
             line-height: 1.87;
             letter-spacing: 0.06em;
-            text-align: center;
+            /*text-align: center;*/
 
             border-radius: 4px;
             border: 0;
             padding: 10px 32px;
         }
        
-        .hero .hero-title {
+        .hero__title {
             margin-top: 0;
             margin-bottom: 30px;
             
@@ -388,29 +369,20 @@
         
         /*Свойства section-block раздел Особенности*/
         
-        .features { 
+        .features__list { 
             display: flex;
 
-            padding: 0;
-            margin: 0;
-
-            list-style: none;          
         }
 
-        .features .item {
+        .features__item {
             width: 270px;
         }
 
-        .features p {
+        .features__description {
             margin: 0;
         }
 
-        .features .item + .item {
-            margin-left: 30px;
-        }
-
-        
-        .features-heading {
+        .features__title {
             padding-top: 30px;
             padding-bottom: 10px;
             margin: 0;
@@ -418,18 +390,11 @@
             color: var(--title-text-color);
             text-transform: uppercase;
             font-weight: 700;
-            font-size: 14px;
+            
             line-height: 1.14;
         }
-
-        .icon-features::before:nth-child(1) {
-            display: block;
-            background-image: url(../images/antenna.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .features .item::before {
+      
+        .features__item::before {
             content: "";
             display: block;
             background-color: var(--bgc-light-grey);
@@ -441,7 +406,7 @@
 
         .antenna::before {
             background-image: url(../images/antenna.svg);
-            background-repeat: no-repeat;
+           background-repeat: no-repeat;
             background-position: center;
         }
 
@@ -467,7 +432,7 @@
         /*Свойства разделов Чем мы занимаемся и Наша команда*/
         
          /*Заголовки секций*/
-         .section-title {
+         .section__title {
             padding: 0;
             margin: 0px 0px 50px;
             text-align: center;
@@ -478,31 +443,22 @@
             line-height: 1.17;
         }
 
-        .section-works {
+        .section__work {
             padding-bottom: 94px;
         }
 
         
-        .works {
+        .work__list {
             display: flex;
-
-            list-style: none;
-
-            padding: 0;
-            margin: 0;
             
         }
 
-        .works .item + .item {
-            margin-left: 30px;
-        }
-
-        .works .item {
+        .work__item {
             position: relative;
             width: 370px;
             height: 294px;
         }
-        .works-overlay {
+        .work__overlay {
             position: absolute;
             bottom: 0;
             left: 0;
@@ -510,8 +466,7 @@
             margin: 0;
             padding-top: 27px;
             padding-bottom: 27px;
-            padding-left: auto;
-                                             
+                        
             line-height: 1.17;
             text-transform: uppercase;
             text-align: center;
@@ -520,18 +475,13 @@
         }
 
 
-        .team {
+        .team__list {
             display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
+            
         }
 
-        .team .item + .item {
-            margin-left: 30px;
-        }
 
-        .team .item {
+        .team__item {
             background: var(--withe-color);
             height: 428px;
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -540,7 +490,7 @@
         }
         
         
-        .section-team {
+        .team {
             background-color: var(--bgc-light-grey);
         }
         /*Фото участников команды*/
@@ -550,7 +500,7 @@
         }
 
         /*Заголовки имен */
-        .team-name {
+        .team__member-name {
             padding: 0;
             margin: 0px 0px 10px 0px;
             text-align: center;
@@ -562,31 +512,28 @@
 
         }
         /*Заголовки должностей*/
-        .team-position {
+        .team__member-position {
             padding: 0;
             margin: 0px 0px 16px 0px;
             text-align: center;
-            display: block;
-            
+                       
             font-size: 16px;
             line-height: 1.19;              
         }
 
         /*Иконки соцсетей у команды*/
 
-        .social-icon-list {
+        .social-icons {
             display: flex;
             justify-content: center;
-            list-style: none;
-            padding: 0;
-            margin: 0;
+            
         }
 
-        .social-icon-item:not(:last-child) {
+        .social-icons__item:not(:last-child) {
             margin-right: 10px;
         }
 
-        .social-icon-link {
+        .social-icons__link {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -598,36 +545,26 @@
             transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .social-icon-link:hover {
+        .social-icons__link:hover {
             background-color: var(--accent-color);
         }
 
-        .social-icon-link:hover .social-icon {
+        .social-icons__link:hover .social-icons__icon {
             fill: var(--withe-color);
 
             transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .social-icon {
+        .social-icons__icon {
             width: 20px;
             height: 20px;
            fill: #AFB1B8;
         }
         
         /*Постоянные клиенты*/
-        .client-icon-list {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+      
 
-        .client-icon-item:not(:last-child) {
-            margin-right: 30px;
-        }
-
-        .client-icon-link {
+        .client__link {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -640,22 +577,21 @@
             transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .client-icon-link:hover .client-icon {
+        .client__link:hover .client__icon {
             fill: var(--accent-color);
         }
 
-        .client-icon-link:hover {
+        .client__link:hover {
             border: 1px solid var(--accent-color)
         }
 
-        .client-icon {
+        .client__icon {
             height: 50px;
             fill: #AFB1B8;
 
             transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* */
         .backdrop {
             position: fixed;
             top: 0;
@@ -700,18 +636,12 @@
             margin: 0;
             padding: 0;
         }
-
-        .modal-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .close-icon-item {
+        
+        .close-icon__item {
             margin: 0;
         }
         
-        .close-icon-link {
+        .close-icon__link {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -734,66 +664,46 @@
             transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .close-icon-link:hover .close-icon,
-        .close-icon-link:focus .close-icon {
+        .close-icon__link:hover .close-icon,
+        .close-icon__link:focus .close-icon {
             fill: var(--accent-color);
         }
 
-        /*Форма заполнения*/
-        .modal-list-form {
-            list-style: none;
+      
+        .modal-form__list {            
             margin-top: 2px;
             margin-left: 40px;
             margin-right: 40px;
             padding: 0;
         }
-        
-        
-        .modal-item-title {
+                
+        .modal-form__item-title {
             margin-bottom: 30px;
         }
 
-        .modal-item-title  h2 {
+        .modal-form__title {
             margin: 0px;
             font-size: 20px;
             line-height: 1.15;
             letter-spacing: 0.03em;
 
             color: var(--title-text-color);
-
         }
 
-        .modal-item {
+        .modal-form__item {
             display: flex;  
-            /*flex-direction: column;*/
+           
         }
-        .modal-item:nth-child(-n + 4) {
+        .modal-form__item:nth-child(-n + 4) {
             margin-bottom: 28px;           
         }
 
-        .modal-label {
+        .modal__label {
             position: relative;
             display: block;
-            border-radius: 4px;  
-
-            transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .modal-label:hover,
-        .modal-label:focus {
-            border: 1px solid var(--accent-color);
-        }
-
-        .form-icon {
-            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .modal-label:hover .form-icon,
-        .modal-label:focus .form-icon {
-            fill: var(--accent-color);
-        }
-               
-        .modal-label span,
+        .modal__label__text,
         .modal-label-comment {
             position: absolute;
             font-size: 12px;
@@ -807,17 +717,25 @@
             transform: translateY(-120%);
         }
 
-        .modal-label input {
+        .modal-form__input {
             margin: 0;
             padding: 14px 15px 14px 42px;
             width: 448px;
             height: 40px;
             border: 1px solid rgba(33, 33, 33, 0.2);
-            border-radius: 4px;
-            /*box-sizing: border-box;*/
+            border-radius: 4px;  
+            
+            transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .modal-form__input:hover,
+        .modal-form__input:focus {
+            border-color: var(--accent-color);
+            outline-color: var(--accent-color);
+            outline-width: 0px;
         }
 
-        .modal-label svg {
+        .form-icon {
             position: absolute;
             display: inline-block;
             top: 50%;
@@ -825,10 +743,17 @@
             transform: translateY(-50%);
             
             fill: var(--title-text-color);
+            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
+       
+        .modal-form__input:focus + .form-icon,
+        .modal-form__input:hover + .form-icon {
+            fill: var(--accent-color);
+        }
+
         .form-icon-name {
             width: 12px;
-            height: 12px;         
+            height: 12px;                    
         }
         .form-icon-phone {
             width: 13px;
@@ -839,12 +764,10 @@
             height: 12px;
         }
         .modal-item-comment {
-            margin-bottom: 20px;
-        }
-        .modal-item-comment {
             position: relative;
             display: flex;
             flex-direction: column;
+            margin-bottom: 20px;
         }
         .modal-item-comment .comment {
             width: 448px;
@@ -854,12 +777,19 @@
             border: 1px solid rgba(33, 33, 33, 0.2);
             box-sizing: border-box;
             border-radius: 4px;
-
-            font-size: 14px;            
+                     
             line-height: 1.14;
             letter-spacing: 0.01em;
+            color: var(--title-text-color);
+        }
+        .comment::placeholder {
+            font-size: 12px;
+            line-height: 1.17;
+            letter-spacing: 0.01em;
+
             color: rgba(117, 117, 117, 0.5);
         }
+        
         .modal-item-checkbox {
             position: relative;
             padding-left: 12px;
@@ -895,15 +825,7 @@
             background-repeat: no-repeat;
             background-position: center;
         } 
-        /*.modal-check-input:focus + .modal-check-box {
-            background-image: url(../images/check.svg);
-            background-color: var(--accent-color);
-            border-radius: 2px;
-            fill: var(--withe-color);
-            background-repeat: no-repeat;
-            background-position: center;
-        } */
-
+     
         .modal-check-agreement {
             display: block;
             margin-left: 8px;
@@ -925,68 +847,50 @@
         .modal-item-button .modal-button {
             width: 200px;
             height: 50px;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 1.87;
-            letter-spacing: 0.06em;
             
-            border-radius: 4px;
-            border: 0;
-            padding: 10px 32px;
-
-            color: var(--withe-color);
-            background-color: var(--accent-color);
         }
      
         /*Свойства Портфолио filter*/
 
-        .filter {
-            padding-top: 94px;
+        .container-filter {
+            margin-bottom: 50px;
         }
 
-        .filter-list {
+        .filter__list {
             display: flex;
-            list-style: none;
-
-            padding: 0;
-            margin: 0;           
+            justify-content: center;         
         }
 
-        .filter-list .item + .item {
-            margin-left: 8px;
+        .filter__item:not(:last-child) {
+            margin-right: 8px;
         }
 
-        .filter-list {
-            justify-content: center;
-        }
-
-                
-        .filter .button {
+        .filter__item .btn {
             display: inline-block;
             border-radius: 4px;
             padding: 6px 22px;
            
-
             color: var(--title-text-color);
             background-color: var(--bgc-light-grey);
             
             font-weight: 500;
             font-size: 16px;
             line-height: 1.62;
-            text-decoration: none;
-
+           
             transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
             background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .filter .button:hover,
-        .filter .button:focus {
+        .filter__item .btn:hover,
+        .filter__item .btn:focus {
             color: var(--withe-color);
             background-color: var(--accent-color);
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
         }
-        .filter .button.current {
+        .filter__item .btn.current {
             color: var(--withe-color);
-            background-color: var(--accent-color);     
+            background-color: var(--accent-color); 
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);    
         }
         
         /*Свойства портфолио project*/
@@ -996,61 +900,50 @@
 
         }
 
-        .project {
-            padding-top: 50px;
-            padding-bottom: 94px;
-        }
-
-        .project-list {
+        .project__list {
             display: flex;
             flex-wrap: wrap;
 
-            list-style: none;
-            margin-top: 0;
-            margin-bottom: 0;
-           
         }
 
-        .project-item {
+        .project__item {
             width: 370px;
             height: 404px;
             margin-right: 30px;
             background: var(--withe-color);
                               
         }
-         .project-item:nth-child(3n) {
+         .project__item:nth-child(3n) {
             margin-right: 0;
         }
 
-        .project-item:nth-child(-n+6) {
+        .project__item:nth-child(-n+6) {
             margin-bottom: 30px;
         }
 
         
-        .project-link {
+        .project__link {
             display: block;
-            list-style: none;
-            text-decoration: none;
-
+           
             padding: 0;
             margin: 0;
             border: 1px solid #EEEEEE;
 
             transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .project-thumb {
+        .project__thumb {
             position: relative;
             overflow: hidden;
                      
         }
 
-        .project-thumb img {
+        .project__img {
             display: block;
             width: 370px;
             height: 294px;
         }
        
-       .project-overlay {
+       .project__overlay {
             position: absolute;
             top: 0;
             margin: 0;
@@ -1068,7 +961,7 @@
             transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
             opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);;
         }
-        .project-meta {
+        .project__meta {
             margin: 0;
             padding-top: 20px;
             padding-bottom: 20px;
@@ -1076,7 +969,7 @@
 
         }
 
-        .project-title {
+        .project__title {
             color: var(--title-text-color);
             font-weight: 700;
             font-size: 18px;
@@ -1086,7 +979,7 @@
             padding: 0;
             margin: 0px 0px 4px 0px;
         }
-        .project-text {
+        .project__text {
             color: var(--primary-text-color);
             font-size: 16px;
             line-height: 1.87;
@@ -1095,14 +988,14 @@
             margin: 0;
         }
 
-        .project-link:hover,
-        .project-link:focus {
+        .project__link:hover,
+        .project__link:focus {
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
         }
 
        
-        .project-link:hover .project-overlay,
-        .project-link:focus .project-overlay {
+        .project__link:hover .project__overlay,
+        .project__link:focus .project__overlay {
             transform: translateY(0);
             opacity: 1;
         }
