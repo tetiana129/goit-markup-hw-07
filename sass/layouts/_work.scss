@@ -1,0 +1,25 @@
+.work__list {
+    display: flex;    
+}
+
+.work__item {
+    position: relative;
+    width: 370px;
+    height: 294px;
+}
+
+.work__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+                
+    line-height: 1.17;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: $withe-color;
+}

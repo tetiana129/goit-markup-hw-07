@@ -1,0 +1,78 @@
+.address {
+    color: $withe-color;
+    font-style: normal;               
+}
+
+.address-logo__item {
+    margin-bottom: 20px;
+}
+
+.address__item:not(:last-child) {            
+    margin-bottom: 9px;
+}
+              
+.address .mail {
+    color: $second-text-color;    
+}
+
+.address .tel {            
+    color: $second-text-color;   
+}
+
+.container-social {            
+    margin: 15px 0px 0px 70px;
+}    
+
+.container-social__label {
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $withe-color;
+    margin: 0px 0px 20px 0px;
+}
+
+
+
+
+
+.container-email {            
+    padding: 0;
+    margin-top: 12px;
+    margin-left: auto;
+}
+
+.form-field {
+    display: flex;
+}
+  
+.form-field__email {
+    display: flex;
+    flex-direction: column;
+}
+      
+.email__label {
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $withe-color;
+    margin: 0px 0px 20px 0px;
+}
+  
+.email__input {
+    width: 358px;
+    margin: 0;
+    padding: 16px 0px 16px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    background-color: $bgc-dark-grey;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.6);
+  
+}
+  
+.form-field-email input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
