@@ -15,6 +15,12 @@
   padding-right: 15px;
 }
 
+.container__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .list {
   list-style: none;
   padding: 0;
@@ -281,12 +287,6 @@
   padding-bottom: 60px;
 }
 
-.container__flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .btn__subscription {
   position: relative;
   width: 200px;
@@ -403,7 +403,7 @@
   line-height: 1.19;
 }
 
-.work__list {
+.work {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -464,14 +464,10 @@
   fill: #2196F3;
 }
 
-.features__list {
+.features {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.features__item {
-  width: 270px;
 }
 
 .features__description {
@@ -486,6 +482,10 @@
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1.14;
+}
+
+.features__item {
+  width: 270px;
 }
 
 .features__item::before {
@@ -558,14 +558,6 @@
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 .project__item {
   width: 370px;
   height: 404px;
@@ -581,15 +573,12 @@
   margin-bottom: 30px;
 }
 
-.project__link {
-  display: block;
-  padding: 0;
-  margin: 0;
-  border: 1px solid #EEEEEE;
-  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .project__thumb {
@@ -648,8 +637,18 @@
   margin: 0;
 }
 
-.project__link:hover,
-.project__link:focus {
+.project__link {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #EEEEEE;
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project__link:hover, .project__link:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }

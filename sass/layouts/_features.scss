@@ -1,25 +1,25 @@
-.features__list { 
+.features { 
     display: flex;
-}
 
-.features__item {
-    width: 270px;
-}
-
-.features__description {
-    margin: 0;
-}
-
-.features__title {
-    padding-top: 30px;
-    padding-bottom: 10px;
-    margin: 0;
-
-    color: $title-text-color;
-    text-transform: uppercase;
-    font-weight: 700;
+    &__description {
+        margin: 0;
+    }
     
-    line-height: 1.14;
+    &__title {
+        padding-top: 30px;
+        padding-bottom: 10px;
+        margin: 0;
+    
+        color: $title-text-color;
+        text-transform: uppercase;
+        font-weight: 700;
+        
+        line-height: 1.14;
+    }
+
+    &__item {
+        width: 270px;    
+    }
 }
 
 .features__item::before {

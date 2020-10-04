@@ -1,19 +1,19 @@
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
-}
 
-.section__title {
-    padding: 0;
-    margin: 0px 0px 50px;
-    text-align: center;
-
-    color: $title-text-color;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-}
-
-.section__work {
-    padding-bottom: 94px;
+    &__title {
+        padding: 0;
+        margin: 0px 0px 50px;
+        text-align: center;
+    
+        color: $title-text-color;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.17;
+    }
+    
+    &__work {
+        padding-bottom: 94px;
+    }
 }

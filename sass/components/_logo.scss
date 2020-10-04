@@ -1,19 +1,22 @@
 .logo {
     color: $title-text-color;
-}
 
-.logo, .logo-footer, .logo-web {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
-}
+    &,
+    .&-footer,
+    .&-web {
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.2;
+    }
 
-.logo-web {
-    color: $accent-color;    
-}
+    .&-web {
+        color: $accent-color;    
+    }
 
-.logo-footer {
-    display: inline-block;
-    color: $withe-color;
+    .&-footer {
+        display: inline-block;
+        color: $withe-color;
+    }
+
 }

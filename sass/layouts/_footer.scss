@@ -5,10 +5,6 @@
     padding-bottom: 60px;
 }
 
-.container__flex {
-    display: flex;
-}
-
 .btn__subscription {
     position: relative;
     width: 200px;
@@ -19,13 +15,13 @@
     margin-left: 12px;            
     display: flex;                       
         
-      .icon-send {
-          position: absolute;
-          top: 50%;
-          right: 28px;
-          transform: translateY(-50%);
-          width: 24px;
-          height: 24px;
-          fill: $withe-color;  
-      }
+    .icon-send {
+        position: absolute;
+        top: 50%;
+        right: 28px;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        fill: $withe-color;  
+    }
 }
