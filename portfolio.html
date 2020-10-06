@@ -10,7 +10,7 @@
     <link rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g==" crossorigin="anonymous" />
     
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/portfolio.min.css">
   
 </head>
 
@@ -18,7 +18,7 @@
 <body class="page"> 
     <header class="header">
         <div class="container">
-            <nav class="navigation">
+            <nav class="header__navigation">
                 <a href="" class="link logo"><span class="logo-web">Web</span>Studio</a>
                 <ul class="list list__flex site-nav">
                     <li class="site-nav__item">
@@ -36,7 +36,7 @@
                     <li class="auth-nav__item">
                         
                         <a class="link auth-nav__link" href="mailto:info@devstudio.com">info@devstudio.com
-                            <svg class="auth-icon mail-icon">
+                            <svg class="auth-nav__icon mail-icon">
                                 <use href="./images/symbol-defs.svg#envelope"></use>
                             </svg>
                            
@@ -46,7 +46,7 @@
                     
                     <li class="auth-nav__item">
                         <a class="link auth-nav__link" href="tel:+380961111111">+38 096 111 11 11
-                            <svg class="auth-icon">
+                            <svg class="auth-nav__icon">
                                 <use href="./images/symbol-defs.svg#smartphone"></use>
                             </svg>                            
                         </a>
@@ -67,7 +67,7 @@
 
         
       <section class="section ">
-            <div class="container container-filter">
+            <div class="container filter">
                 <ul class="list filter__list">
                     <li class="filter__item">
                         <a href="" class="link btn current">Все</a>
@@ -244,7 +244,7 @@
 
                     <!--Логотип-->
                     <ul class="list">
-                        <li class="address__item">
+                        <li class="address-logo__item">
                             <a href="" class="link logo-footer"><span class="logo-web">Web</span>Studio</a>
                         </li>
                        <li class="address__item">
@@ -261,9 +261,9 @@
                 </address>
             </div>
 
-            <div class="container-social">
+            <div class="social__container">
                 <!--Присоединяйтесь-->
-                <p class="container-social__label">Присоединяйтесь</p>
+                <p class="social__container__label">Присоединяйтесь</p>
                 <ul class="list social-icons">                    
                     <li class="social-icons__item">
                         <a class="link social-icons__link blue-circle-link" href="https://www.instagram.com/" target="_blank">
@@ -296,11 +296,11 @@
                     </ul>                                     
             </div>
 
-            <div class="container-email">
+            <div class="email">
                 <!--Подпишитесь на рассылку-->
                 <form class="form">
-                   <div class="form-field">
-                        <div class="form-field__email">
+                   <div class="email__form-field">
+                        <div class="email__form-field-email">
                             <label for="name" class="email__label">Подпишитесь на рассылку</label>
                              <input class="email__input"
                              type="text"

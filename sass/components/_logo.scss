@@ -2,19 +2,17 @@
     color: $title-text-color;
 
     &,
-    .&-footer,
-    .&-web {
+    &-footer,
+    &-web {
         font-family: "Raleway", sans-serif;
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 1.2;
+        @include font(26px, 1.2, 700);              
     }
 
-    .&-web {
+    &-web {
         color: $accent-color;    
     }
 
-    .&-footer {
+    &-footer {
         display: inline-block;
         color: $withe-color;
     }

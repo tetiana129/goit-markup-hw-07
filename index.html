@@ -16,7 +16,7 @@
 <body class="page">  
     <header class="header">
         <div class="container">
-            <nav class="navigation">
+            <nav class="header__navigation">
                 <a href="./" class="link logo"><span class="logo-web">Web</span>Studio</a>
                 <ul class="list list__flex site-nav">
                     <li class="site-nav__item">
@@ -34,7 +34,7 @@
                     <li class="auth-nav__item">
                         
                         <a class="link auth-nav__link" href="mailto:info@devstudio.com">info@devstudio.com
-                            <svg class="auth-icon mail-icon">
+                            <svg class="auth-nav__icon mail-icon">
                                 <use href="./images/symbol-defs.svg#envelope"></use>
                             </svg>
                         </a>
@@ -42,7 +42,7 @@
                     
                     <li class="auth-nav__item">
                         <a class="link auth-nav__link" href="tel:+380961111111">+38 096 111 11 11
-                            <svg class="auth-icon">
+                            <svg class="auth-nav__icon">
                                 <use href="./images/symbol-defs.svg#smartphone"></use>
                             </svg>                            
                         </a>
@@ -55,8 +55,6 @@
 
     <!--Главный контент страницы-->
     <main>
-
-    
     <!--Главный герой-->
         <section class="hero hero__container">
             <div class="container">
@@ -342,9 +340,9 @@
                </ul>    
             </address>
 
-            <div class="container-social">
+            <div class="social__container">
                 <!--Присоединяйтесь-->
-                <p class="container-social__label">Присоединяйтесь</p>
+                <p class="social__container__label">Присоединяйтесь</p>
                 <ul class="list social-icons">                    
                     <li class="social-icons__item">
                         <a class="link social-icons__link blue-circle-link" href="https://www.instagram.com/" target="_blank">
@@ -378,11 +376,11 @@
                                      
             </div>
 
-            <div class="container-email">
+            <div class="email">
                 <!--Подпишитесь на рассылку-->
                 <form class="form">
-                   <div class="form-field">
-                        <div class="form-field__email">
+                   <div class="email__form-field">
+                        <div class="email__form-field-email">
                             <label for="name" class="email__label">Подпишитесь на рассылку</label>
                              <input class="email__input"
                              type="text"
@@ -410,75 +408,67 @@
         <div class="modal">
            
             <!--Форма заказа-->
-        
             <form class="modal-form">
-                <ul class="list">
-                    <li class="close-icon__item">
-                        <a href="" class="link close-icon__link" data-modal-close>
-                            <svg class="close-icon">
-                                <use href="./images/symbol-defs.svg#close-icon"></use>
-                            </svg>
-                        </a>
-
-                        <ul class="list modal-form__list">
-                            <li class="modal-form__item-title">
-                                <h2 class="modal-form__title">Оставьте свои данные, мы вам перезвоним</h2>
-                            </li>
-                            <li class="modal-form__item">
-                                <label class="modal__label">
-                                    <span class="modal__label__text">Имя</span>
-                                    <input type="text" class="modal-form__input" name="user-name">
-                                    <svg class="form-icon form-icon-name">
-                                        <use href="./images/symbol-defs.svg#name"></use>
-                                    </svg>                           
-                                </label>
-                            </li>
-                            <li class="modal-form__item">
-                                <label class="modal__label">
-                                    <span class="modal__label__text">Телефон</span>
-                                    <input type="tel" class="modal-form__input" name="user-tel">
-                                    <svg class="form-icon form-icon-phone">
-                                        <use href="./images/symbol-defs.svg#phon"></use>
-                                    </svg>                           
-                                </label>
-                            </li>
-                            <li class="modal-form__item">
-                                <label class="modal__label">
-                                    <span class="modal__label__text">Почта</span>
-                                    <input type="email" class="modal-form__input" name="user-email">
-                                    <svg class="form-icon form-icon-mail">
-                                        <use href="./images/symbol-defs.svg#mail"></use>
-                                    </svg>                           
-                                </label>
-                            </li>
-                            <li class="modal-item-comment">
-                                <label class="modal-label-comment" for="comment">Комментарий</label>
-                                <textarea class="comment" name="comment" id="comment" 
-                               rows="10" placeholder="Введите текст"></textarea>
-                            </li>
-                            <li class="modal-item-checkbox">
-                                <label class="modal-label-checkbox">
-                                    <input type="checkbox" class="modal-check-input" name="checkbox">
-                                    <span class="modal-check-box"></span>
-                                    <span class="modal-check-agreement">
-                                        <span class="modal-agreement">Соглашаюсь с рассылкой и принимаю
-                                            <a href="./" class="modal-agreement-link">Условия договора</a>
-                                        </span>
-                                    </span>
-                                </label>
-                            </li>
-                            <li class="modal-item-button">
-                                <button type="submit" class="btn modal-button">Отправить</button>
-                            </li>
-                        </ul>
-                    </li>                                               
-                </ul>                             
+                <div class="modal-form__close-icon">
+                    <a href="" class="link close-icon__link" data-modal-close>
+                        <svg class="close-icon">
+                            <use href="./images/symbol-defs.svg#close-icon"></use>
+                        </svg>
+                    </a>
+                </div>
+                                  
+                <ul class="list modal-form__list">
+                    <li class="modal-form__item-title">
+                        <h2 class="modal-form__title">Оставьте свои данные, мы вам перезвоним</h2>
+                    </li>
+                    <li class="modal-form__item">
+                        <label class="modal-form__label">
+                            <span class="modal-form__label-text">Имя</span>
+                            <input type="text" class="modal-form__input" name="user-name">
+                            <svg class="form-icon form-icon-name">
+                                <use href="./images/symbol-defs.svg#name"></use>
+                            </svg>                           
+                        </label>
+                    </li>
+                    <li class="modal-form__item">
+                        <label class="modal-form__label">
+                            <span class="modal-form__label-text">Телефон</span>
+                            <input type="tel" class="modal-form__input" name="user-tel">
+                            <svg class="form-icon form-icon-phone">
+                                <use href="./images/symbol-defs.svg#phon"></use>
+                            </svg>                           
+                        </label>
+                    </li>
+                    <li class="modal-form__item">
+                        <label class="modal-form__label">
+                            <span class="modal-form__label-text">Почта</span>
+                            <input type="email" class="modal-form__input" name="user-email">
+                            <svg class="form-icon form-icon-mail">
+                                <use href="./images/symbol-defs.svg#mail"></use>
+                            </svg>                           
+                        </label>
+                    </li>
+                    <li class="modal-form__item-comment">
+                        <label class="modal-form__label-comment" for="comment">Комментарий</label>
+                        <textarea class="comment" name="comment" id="comment" 
+                       rows="10" placeholder="Введите текст"></textarea>
+                    </li>
+                    <li class="modal-item-checkbox">
+                        <label class="modal-label-checkbox">
+                            <input type="checkbox" class="modal-check-input" name="checkbox">
+                            <span class="modal-check-box"></span>
+                            <span class="modal-check-agreement">
+                                <span class="modal-agreement">Соглашаюсь с рассылкой и принимаю
+                                    <a href="./" class="modal-agreement-link">Условия договора</a>
+                                </span>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="modal-item-button">
+                        <button type="submit" class="btn modal-button">Отправить</button>
+                    </li>
+                </ul>                        
             </form>
-
-             
-            
-
-
         </div>
     </div>
   
